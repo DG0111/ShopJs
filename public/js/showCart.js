@@ -1,6 +1,7 @@
 import {showCart} from "../module/all.js";
 import {checkSession} from "../module/all.js";
 import {summary} from "../module/all.js";
+import {SearchInput2} from "../module/all.js";
 
 const mainCheckCard = document.querySelector("#mainCheckCard");
 const noneCard = document.querySelector("#noneCard");
@@ -9,6 +10,7 @@ const total = document.querySelector("#total");
 
 
 checkSession();
+SearchInput2();
 
 const ShowCart = () => {
 
@@ -70,10 +72,10 @@ if (!objSession || objSession.length === 0) {
 }
 
 
-// let checkOut = document.querySelector('#checkOut');
-// checkOut.onclick = () => {
-//     location.replace('http://localhost:63342/shopingJs/page/checkOut.html')
-// };
+let checkOut = document.querySelector('#checkOut');
+checkOut.onclick = () => {
+    location.replace('http://localhost:63342/shopingJs/page/checkOut.html')
+};
 
 
 

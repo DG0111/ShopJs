@@ -1,8 +1,10 @@
 import {checkSession} from "../module/all.js";
+import {SearchInput2} from "../module/all.js";
 
 checkSession();
 
 let btnCheckout = document.querySelector('#btnCheckout');
+SearchInput2();
 
 btnCheckout.onclick = () => {
     let check = validation();

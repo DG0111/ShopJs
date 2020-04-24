@@ -10,6 +10,8 @@ import {loader} from "../module/all.js";
 import {Search} from "../module/all.js";
 import {addToCartInProduct} from "../module/all.js";
 import {SearchInput2} from "../module/all.js";
+import {news} from "../module/apiModule.js";
+import {printNew} from "../module/all.js";
 
 SearchInput2();
 
@@ -23,40 +25,16 @@ $('input[type="range"]').val(0).change(() => {
 
 let cart = checkSession();
 
-if (cart === undefined) {
-    cart = [];
-}
-
 categories().then(data => {
     showCategories(data, 'showCategories');
 });
 
-if (GetURLParameter('category') !== undefined) {
-    productInCategory2(GetURLParameter('category')).then(data => {
-        printProductInProduct(data);
-        addToCartInProduct(cart);
-    });
-} else if (GetURLParameter('price') !== undefined) {
-    products().then(data => { /// lười quá rồi huhu
-        printProductInProduct(_.filter(data, value => value.price <= GetURLParameter('price')));
-        let btnAddToCart = document.querySelectorAll(".addToCart");
-        addToCartInProduct(cart);
-    });
-} else if (GetURLParameter('search') !== undefined) { /// search lè
-    products().then(data => {
-        let arr = Search(data,GetURLParameter('search'));
-        let array = [];
-        _.forEach(arr, value => {
-            array.push(value.item);
-        });
-        printProductInProduct(array);
-        addToCartInProduct(cart);
-    })
-} else {
-    products().then(data => {
-        printProductInProduct(data);
-        addToCartInProduct(cart);
-    });
-}
+news().then(data => {
+    printNew(data);
+});
+
+
+
+
 
 

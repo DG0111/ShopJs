@@ -38,16 +38,15 @@
                 </li>
             </ul>
 
-            <form class="form-inline mt-2 mt-md-0 mr-5">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
+            <div class="form-inline mt-2 mt-md-0 mr-5">
+                <input id="inputSearch" class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                <button id="btnSearch" class="btn btn-outline-success my-2 my-sm-0">Search</button>
+            </div>
             <!-- Button -->
             <div class="pt-2">
                 <a id="myCart" href="./page/showCart.html">My card (<span id="carNumbers"></span>)</a>
             </div>
         </div>
-
     </div>
 </nav>
 <div class="container p-0">
@@ -97,8 +96,6 @@
                 <div class="col-lg-9">
                     <h2 class="my-4">Selling products</h2>
                     <div class="row" id="showProductSelling">
-
-
                     </div>
                 </div>
 

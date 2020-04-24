@@ -39,10 +39,10 @@
                 </li>
             </ul>
 
-            <form class="form-inline mt-2 mt-md-0 mr-5">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
+            <div class="form-inline mt-2 mt-md-0 mr-5">
+                <input id="inputSearch" class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                <button id="btnSearch" class="btn btn-outline-success my-2 my-sm-0">Search</button>
+            </div>
             <!-- Button -->
             <div class="pt-2">
                 <a id="myCart" href="./showCart.html">My card (<span id="carNumbers"></span>)</a>
@@ -58,7 +58,7 @@
             <h2 class="my-4">Category</h2>
             <div class="list-group" id="showCategories">
             </div>
-            <input  min="0" max="10000" type="range">
+            <input  min="0" max="100" type="range">
             <a id="filter" href="javascript:void(0)" class="btn btn-primary">FILTER</a>
             <br>
             <span id="priceFilter"></span>
@@ -136,6 +136,7 @@
 <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="https://momentjs.com/downloads/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.js"></script>
 

@@ -76,8 +76,8 @@ export const editProductApi = (idCategory, idProduct, arr) => {
 
 // add them product
 
-export const addProduct = (arr) => {
-    let url = `http://5e79bb5b17314d00161335e8.mockapi.io/category/1/products`;
+export const addProduct = (arr,idCate) => {
+    let url = `http://5e79bb5b17314d00161335e8.mockapi.io/category/${idCate}/products`;
     axios.post(url, arr)
         .then(function (response) {
             location.replace("http://localhost:63342/shopingJs/page/admin/index.html?add=true");
@@ -102,8 +102,15 @@ export const productInCategory2 = async (idCate) => {
     return response.data;
 };
 
+// news
 
-
-
-
+export const news = async () => {
+    try {
+        let urlApi = 'http://5e79bb5b17314d00161335e8.mockapi.io/news';
+        const response = await axios.get(urlApi);
+        return response.data;
+    } catch (e) {
+        console.log(e)
+    }
+};
 

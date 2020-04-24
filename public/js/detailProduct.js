@@ -6,9 +6,11 @@ import {oneProduct} from "../module/apiModule.js";
 import {showDetailProduct} from "../module/all.js";
 import {addToCart} from "../module/all.js";
 import {productInCategory} from "../module/apiModule.js";
+import {SearchInput2} from "../module/all.js";
 
 
 let cart = checkSession();
+SearchInput2();
 
 if(cart === undefined) {
     cart = [];

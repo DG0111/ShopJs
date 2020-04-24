@@ -7,10 +7,13 @@ import {printProductSelling} from "../module/all.js";
 import {addToCardSuccess} from "../module/all.js";
 import {checkSession} from "../module/all.js";
 import {addToCart} from "../module/all.js";
+import {SearchInput} from "../module/all.js";
+
+SearchInput();
 
 let cart = checkSession();
 
-if(cart == undefined) {
+if (cart == undefined) {
     cart = [];
 }
 
@@ -42,7 +45,7 @@ products().then(data => {
             let nameProduct = btnAddToCart[k].getAttribute("nameProduct")
             let priceProduct = btnAddToCart[k].getAttribute("priceProduct")
             let imageProduct = btnAddToCart[k].getAttribute("imageProduct")
-            addToCart(idProduct, nameProduct, priceProduct, imageProduct,cart);
+            addToCart(idProduct, nameProduct, priceProduct, imageProduct, cart);
         }
     }
 });

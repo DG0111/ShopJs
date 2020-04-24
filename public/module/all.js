@@ -280,7 +280,7 @@ export const previewImage = (fileImage, img) => {
 
 export const showCategories = (arr, idBoxShow, page = '') => {
     let showCategory = document.querySelector(`#${idBoxShow}`);
-    if(page === 'index') {
+    if (page === 'index') {
         _.map(arr, (value) => {
             showCategory.innerHTML += `
             <a href="./page/products.html?category=${value.id}" class="list-group-item">${value.name}</a>
@@ -334,13 +334,12 @@ export const printProductNew = (arr) => {
                             <img class="card-img-top" style="height: 225px; width: 100%; display: block;" src="${value.image}" data-holder-rendered="true">
                             <div class="card-body">
                               <p class="card-text">${value.name}</p>
-                              <p class="card-text">${value.detail}</p>
+                              <small class="text-muted">${value.price} VNĐ</small>
                               <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
                                   <a href="page/detailProduct.html?idCate=${value.categoryId}&idPro=${value.id}" type="button" class="btn btn-sm btn-outline-secondary">View</a>
                                   <button type="button" idProduct="${value.id}" nameProduct="${value.name}" priceProduct="${value.price}" imageProduct="${value.image}" class="btn btn-sm btn-outline-secondary addToCart">Add card</button>
                                 </div>
-                                <small class="text-muted">${value.price} VNĐ</small>
                               </div>
                             </div>
                           </div>
@@ -358,13 +357,12 @@ export const printProductSelling = (arr) => {  // show product selling :)
                             <img class="card-img-top" style="height: 225px; width: 100%; display: block;" src="${value.image}" data-holder-rendered="true">
                             <div class="card-body">
                               <p class="card-text">${value.name}</p>
-                              <p class="card-text">${value.detail}</p>
+                              <small class="text-muted">${value.price} VNĐ</small>
                               <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
                                   <a href="page/detailProduct.html?idCate=${value.categoryId}&idPro=${value.id}" type="button" class="btn btn-sm btn-outline-secondary">View</a>
                                   <button type="button" idProduct="${value.id}" nameProduct="${value.name}" priceProduct="${value.price}" imageProduct="${value.image}" class="btn btn-sm btn-outline-secondary addToCart">Add card</button>
                                 </div>
-                                <small class="text-muted">${value.price} VNĐ</small>
                               </div>
                             </div>
                           </div>
@@ -518,7 +516,6 @@ export const summary = (arr) => {
 };
 
 
-
 export const printProductInProduct = (array) => {
     var showProducts = document.querySelector('#showProducts');
     // in ra table - su dung foreach
@@ -529,13 +526,84 @@ export const printProductInProduct = (array) => {
                             <img class="card-img-top" style="height: 225px; width: 100%; display: block;" src="${value.image}" data-holder-rendered="true">
                             <div class="card-body">
                               <p class="card-text">${value.name}</p>
-                              <p class="card-text">${value.detail}</p>
+                              <small class="text-muted">${value.price} VNĐ</small>
                               <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
-                                  <a href="./detailProduct.html?idCate=${value.categoryId}&idPro=${value.id}" type="button" class="btn btn-sm btn-outline-secondary">View</a>
+                                  <a href="page/detailProduct.html?idCate=${value.categoryId}&idPro=${value.id}" type="button" class="btn btn-sm btn-outline-secondary">View</a>
                                   <button type="button" idProduct="${value.id}" nameProduct="${value.name}" priceProduct="${value.price}" imageProduct="${value.image}" class="btn btn-sm btn-outline-secondary addToCart">Add card</button>
                                 </div>
-                                <small class="text-muted">${value.price} VNĐ</small>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                `
+    });
+};
+
+
+export const Search = (data, key) => {
+    const options = {
+        keys: [
+            "name",
+            "detail",
+        ]
+    };
+
+    const fuse = new Fuse(data, options);
+
+// Change the pattern
+    const pattern = key;
+
+    return fuse.search(pattern)
+};
+
+export const addToCartInProduct = (cart) => {
+    let btnAddToCart = document.querySelectorAll(".addToCart");
+    for (let k = 0; k < btnAddToCart.length; k++) {
+        btnAddToCart[k].onclick = () => {
+            let idProduct = btnAddToCart[k].getAttribute("idProduct");
+            let nameProduct = btnAddToCart[k].getAttribute("nameProduct");
+            let priceProduct = btnAddToCart[k].getAttribute("priceProduct");
+            let imageProduct = btnAddToCart[k].getAttribute("imageProduct");
+            addToCart(idProduct, nameProduct, priceProduct, imageProduct, cart);
+        }
+    }
+};
+
+export const SearchInput = () => {
+    let btnSearch = document.querySelector('#btnSearch');
+    let inputSearch = document.querySelector('#inputSearch');
+
+    btnSearch.onclick = () => {
+        location.replace(`./page/products.html?search=${inputSearch.value}`);
+    };
+};
+
+
+export const SearchInput2 = () => {
+    let btnSearch = document.querySelector('#btnSearch');
+    let inputSearch = document.querySelector('#inputSearch');
+
+    btnSearch.onclick = () => {
+        location.replace(`./products.html?search=${inputSearch.value}`);
+    };
+};
+
+
+export const printNew = (array) => {
+    let showNews = document.querySelector('#showNews');
+    // in ra table - su dung foreach
+    _.forEach(array, (value) => {
+        showNews.innerHTML += `
+                    <div class="col-md-4 mb-4">
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top" style="height: 225px; width: 100%; display: block;" src="${value.image}" data-holder-rendered="true">
+                            <div class="card-body">
+                              <p class="card-text">${value.name}</p>
+                              <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                  <a href="page/detailNew.html?id=${value.id}" class="btn btn-sm btn-outline-secondary">View</a>
+                                </div>
                               </div>
                             </div>
                           </div>
