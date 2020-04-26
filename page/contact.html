@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>show product</title>
+    <title>Check out</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="../public/style.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9.10.12/dist/sweetalert2.all.js"></script>
-
 </head>
-<body>
+
+<body class="container">
 <nav class="navbar navbar-expand-xl navbar-light">
     <div class="container">
         <!-- Brand -->
@@ -26,7 +26,7 @@
             <!-- Nav -->
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
-                    <a href="index.html" class="nav-link active">Home</a>
+                    <a href="../index.html" class="nav-link active">Home</a>
                 </li>
                 <li class="nav-item">
                     <a href="./contact.html" class="nav-link">Contact</a>
@@ -40,52 +40,103 @@
             </ul>
 
             <div class="form-inline mt-2 mt-md-0 mr-5">
-                <input id="inputSearch" class="form-control mr-sm-2" type="text" placeholder="Search"
-                       aria-label="Search">
+                <input id="inputSearch" class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
                 <button id="btnSearch" class="btn btn-outline-success my-2 my-sm-0">Search</button>
             </div>
             <!-- Button -->
             <div class="pt-2">
-                <a id="myCart" href="./showCart.html">My card (<span id="carNumbers"></span>)</a>
+                <a id="myCart" href="showCart.html">My card (<span id="carNumbers"></span>)</a>
             </div>
         </div>
 
     </div>
 </nav>
+<!--Section: Contact v.2-->
+<section class="mb-4">
 
-<div class="container">
+    <!--Section heading-->
+    <h2 class="h1-responsive font-weight-bold text-center my-4">Contact us</h2>
+    <!--Section description-->
+    <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
+        a matter of hours to help you.</p>
+
     <div class="row">
-        <div class="col-lg-3">
-            <h2 class="my-4">Category</h2>
-            <div class="list-group" id="showCategories">
-            </div>
-            <input min="0" max="100" type="range">
-            <a id="filter" href="javascript:void(0)" class="btn btn-primary">FILTER</a>
-            <br>
-            <span id="priceFilter"></span>
-        </div>
-        <!-- /.col-lg-3 -->
-        <div class="col-lg-9">
-            <div class="container p-0 pt-4">
+
+        <!--Grid column-->
+        <div class="col-md-9 mb-md-0 mb-5">
+            <form id="formContact" name="contact-form">
+
+                <!--Grid row-->
                 <div class="row">
-                    <h2 class="col">All Products</h2>
-                    <select class="col" id="filter2">
-                        <option value="" >FILTER</option>
-                        <option value="1">A to Z</option>
-                        <option value="2">Z to A</option>
-                        <option value="3">Price min to max</option>
-                        <option value="4">Price max to min</option>
-                    </select>
-                    <a href="javascript:void(0)" id="btnFilter2" class="btn btn-primary ml-3">FILTER</a>
-                </div>
-                <div class="card-deck mt-4 row" id="showProducts">
+
+                    <!--Grid column-->
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <input type="text" id="name" name="name" class="form-control">
+                            <label for="name" class="">Your name</label>
+                        </div>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <input type="text" id="email" name="email" class="form-control">
+                            <label for="email" class="">Your email</label>
+                        </div>
+                    </div>
+                    <!--Grid column-->
 
                 </div>
+                <!--Grid row-->
+
+                <!--Grid row-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="md-form mb-0">
+                            <input type="text" id="subject" name="subject" class="form-control">
+                            <label for="subject" class="">Subject</label>
+                        </div>
+                    </div>
+                </div>
+                <!--Grid row-->
+
+                <!--Grid row-->
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-md-12">
+
+                        <div class="md-form">
+                            <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                            <label for="message">Your message</label>
+                        </div>
+
+                    </div>
+                </div>
+                <!--Grid row-->
+
+            </form>
+
+            <div class="text-center text-md-left">
+                <button class="btn btn-primary" id="btnSend">Send</button>
             </div>
+            <div class="status"></div>
         </div>
-    </div>
-</div>
+        <!--Grid column-->
 
+        <!--Grid column-->
+        <div class="col-md-3 text-center">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1317.
+            980955635046!2d105.66279276783163!3d20.87958285530092!2m3!1f0!2f0!3f0!3m2!1i102
+            4!2i768!4f13.1!3m3!1m2!1s0x31344ef35cf3e225%3A0x476115bd25d97e8f!2sAn%20H%C3%B2a%20paris
+            h%20church!5e0!3m2!1svi!2s!4v1587784576853!5m2!1svi!2s" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+        <!--Grid column-->
+    </div>
+
+</section>
+<!--Section: Contact v.2-->
 <footer class="container py-5">
     <div class="row">
         <div class="col-12 col-md">
@@ -133,8 +184,6 @@
     </div>
 </footer>
 
-<div id="pagination-demo"></div>
-
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>
@@ -147,11 +196,13 @@
 <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="https://momentjs.com/downloads/moment.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.js"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.js"></script>
 
 
-<script src="../public/js/product.js" type="module"></script>
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+
+<script src="../public/js/contact.js" type="module"></script>
+
 </body>
 </html>

@@ -2,21 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf342dc7-2a24-4feb-9f21-5bec6563e975" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/contact.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page/admin/addProduct.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/admin/addProduct.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page/admin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/admin/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/page/checkOut.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/checkOut.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/page/detailProduct.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/detailProduct.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/news.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/page/products.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/products.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/page/showCart.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/showCart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/addProduct.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/addProduct.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/checkOut.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/checkOut.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/detailProduct.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/detailProduct.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/homePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/homePage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/product.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/showCart.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/showCart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/module/all.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/module/all.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/module/apiModule.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/module/apiModule.js" afterDir="false" />
     </list>
@@ -102,7 +97,10 @@
       <workItem from="1587643340690" duration="6676000" />
       <workItem from="1587658668179" duration="107000" />
       <workItem from="1587712197238" duration="3313000" />
-      <workItem from="1587737036259" duration="8357000" />
+      <workItem from="1587737036259" duration="8499000" />
+      <workItem from="1587746787972" duration="565000" />
+      <workItem from="1587783698578" duration="1284000" />
+      <workItem from="1587889797096" duration="5633000" />
     </task>
     <servers />
   </component>
@@ -110,20 +108,20 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="390" y="191" key="com.intellij.ide.util.TipDialog" timestamp="1587737036645">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="1754" y="191" key="com.intellij.ide.util.TipDialog" timestamp="1587889797405">
+      <screen x="1366" y="0" width="1360" height="728" />
     </state>
-    <state x="390" y="191" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1587737036645" />
-    <state x="1754" y="191" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.0.1360.728@1366.0.1360.728" timestamp="1587393124051" />
+    <state x="390" y="191" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1587783702726" />
+    <state x="1754" y="191" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.0.1360.728@1366.0.1360.728" timestamp="1587889797405" />
     <state x="1698" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1587023081077">
       <screen x="1366" y="0" width="1360" height="728" />
     </state>
     <state x="1698" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.728/1366.0.1360.728@1366.0.1360.728" timestamp="1587023081077" />
-    <state x="328" y="0" width="1054" height="716" maximized="true" key="dock-window-1" timestamp="1587267853229">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="1521" y="1" width="1030" height="716" maximized="true" key="dock-window-1" timestamp="1587910193671">
+      <screen x="1366" y="0" width="1360" height="728" />
     </state>
     <state x="1366" y="0" width="1067" height="716" maximized="true" key="dock-window-1/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1587190330714" />
-    <state x="328" y="0" width="1054" height="716" maximized="true" key="dock-window-1/0.0.1366.728/1366.0.1360.728@1366.0.1360.728" timestamp="1587267853229" />
+    <state x="1521" y="1" width="1030" height="716" maximized="true" key="dock-window-1/0.0.1366.728/1366.0.1360.728@1366.0.1360.728" timestamp="1587910193671" />
     <state x="267" y="0" width="994" height="716" maximized="true" key="dock-window-2" timestamp="1587053303127">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -136,10 +134,21 @@
       <screen x="1366" y="0" width="1360" height="728" />
     </state>
     <state x="1702" y="162" key="run.anything.popup/0.0.1366.728/1366.0.1360.728@1366.0.1360.728" timestamp="1587180617522" />
-    <state x="345" y="49" width="675" height="678" key="search.everywhere.popup" timestamp="1587740985482">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="1709" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1587910381625">
+      <screen x="1366" y="0" width="1360" height="728" />
     </state>
     <state x="345" y="49" width="675" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1587740985482" />
-    <state x="1709" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.1360.728@1366.0.1360.728" timestamp="1587478690210" />
+    <state x="1709" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.1360.728@1366.0.1360.728" timestamp="1587910381625" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/public/js/contact.js</url>
+          <line>7</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

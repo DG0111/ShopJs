@@ -322,6 +322,30 @@ export const compareValues = (key, order = 'asc') => {
 };
 
 
+export const compareValueNumber = (key, order = 'asc') => {
+    return function (a, b) {
+        if (!a.hasOwnProperty(key) || !b.hasOwnProperty(key)) {
+            // nếu không tồn tại
+            return 0;
+        }
+        const varA = (typeof a[key] === 'string') ?
+            parseInt(a[key]) : a[key];
+        const varB = (typeof b[key] === 'string') ?     // hàm sắp xếp creatAt từ nhỏ đến lớn hoặc từ lớn đến nhỏ
+            parseInt(b[key]) : b[key];
+
+        let comparison = 0;
+        if (varA > varB) {
+            comparison = 1;
+        } else if (varA < varB) {
+            comparison = -1;
+        }
+        return (
+            (order == 'desc') ? (comparison * -1) : comparison
+        );
+    }
+};
+
+
 // show san pham moi nhat
 
 
@@ -602,11 +626,37 @@ export const printNew = (array) => {
                               <p class="card-text">${value.name}</p>
                               <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
-                                  <a href="page/detailNew.html?id=${value.id}" class="btn btn-sm btn-outline-secondary">View</a>
+                                  <a href="./detailNew.html?id=${value.id}" class="btn btn-sm btn-outline-secondary">View</a>
                                 </div>
                               </div>
                             </div>
                           </div>
+                    </div>
+                `
+    });
+};
+
+
+export const printNewHomePage = (arr) => {
+    let showNews = document.querySelector('#news');
+    // in ra table - su dung foreach
+    _.forEach(arr, (value) => {
+        showNews.innerHTML += `
+                    <div class="col-md-6">
+                        <div class="card flex-md-row mb-4 box-shadow h-md-250">
+                            <div class="card-body d-flex flex-column align-items-start">
+                                <strong class="d-inline-block mb-2 text-success">Design</strong>
+                                <h3 class="mb-0">
+                                    <a class="text-dark" href="#">${value.name}</a>
+                                </h3>
+                                <div class="mb-1 text-muted">${moment(value.createdAt).format('YYYY-MM-DD')}1</div>
+                                <a href="./page/detailNew.html?id=${value.id}">Continue reading</a>
+                            </div>
+                            <img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb"
+                                 alt="Thumbnail [200x250]"
+                                 src="${value.image}"
+                                 data-holder-rendered="true" style="width: 200px; height: 250px;">
+                        </div>
                     </div>
                 `
     });

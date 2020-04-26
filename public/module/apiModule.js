@@ -114,3 +114,13 @@ export const news = async () => {
     }
 };
 
+export const newsId = async (id) => {
+    try {
+        let urlApi = `http://5e79bb5b17314d00161335e8.mockapi.io/news/${id}`;
+        const response = await axios.get(urlApi);
+        return response.data;
+    } catch (e) {
+        console.log(e)
+    }
+};
+

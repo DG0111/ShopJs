@@ -8,6 +8,10 @@ import {addToCardSuccess} from "../module/all.js";
 import {checkSession} from "../module/all.js";
 import {addToCart} from "../module/all.js";
 import {SearchInput} from "../module/all.js";
+import {news} from "../module/apiModule.js";
+import {printNewHomePage} from "../module/all.js";
+import {compareValueNumber} from "../module/all.js";
+
 
 SearchInput();
 
@@ -30,7 +34,7 @@ products().then(data => {
     let top3NewProducts = _.slice(productSortDesc, 0, 3);
     printProductNew(top3NewProducts);
 
-    let productSortDescPrice = data.sort(compareValues('price', 'esc'));
+    let productSortDescPrice = data.sort(compareValueNumber('price', 'esc'));
     let top6PriceProducts = _.slice(productSortDescPrice, 0, 6);
 
     printProductSelling(top6PriceProducts); // in ra danh sach san pham gia thap nhat
@@ -48,6 +52,16 @@ products().then(data => {
             addToCart(idProduct, nameProduct, priceProduct, imageProduct, cart);
         }
     }
+});
+
+
+news().then(data => {
+    let newSortDesc = data.sort(compareValues('createdAt', 'desc'));
+    let arr = [];
+    for (let i = 0; i < 4; i++) {
+        arr.push(newSortDesc[i]);
+    }
+    printNewHomePage(arr);
 });
 
 
